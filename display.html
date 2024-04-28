@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matches</title>
+<style>
+.container {
+  border: 1px solid #ccc;
+  border-radius: 10px; /* Rounded corners */
+  padding: 20px; /* Increased padding */
+  margin: 10px auto; /* Centering the container horizontally */
+  max-width: 400px; /* Limiting container width */
+  background-color: #f0f0f0; /* Background color */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Box shadow for depth */
+}
+
+</style>
+</head>
+<body>
+
+<div id="matchesContainer"></div>
+
+<script >
+    // Function to load saved data from local storage
+function loadMatches() {
+  var savedMatches = JSON.parse(localStorage.getItem("matches"));
+  if (savedMatches) {
+    var matchesContainer = document.getElementById("matchesContainer");
+    matchesContainer.innerHTML = ""; // Clear existing content
+
+    savedMatches.forEach(function(match, index) {
+      var container = document.createElement("div");
+      container.classList.add("container");
+      container.innerHTML = `
+        <p>Match ${index + 1}</p>
+        <center>
+        <h2><span class="team1" style='margin-right: 10px'>${match.team1 || ''}</span>  vs  <span class="team2" style='margin-left: 10px'>${match.team2 || ''}</span></h2>
+        <h2><span class="team1" style='margin-right: 10px'>${match.points1|| ''}</span> vs <span class="team2" style='margin-left: 10px'>${match.points2 || ''}</span></h2>
+        <p>Winner: <span class="winner">${match.winner || ''}</span></p>
+        </center>
+      `;
+      matchesContainer.appendChild(container);
+    });
+  }
+}
+
+// Load saved matches when the page loads
+window.onload = function() {
+  loadMatches();
+};
+
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Table</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <h2>Input Data (Separated by Commas)</h2>
+  <input type="text" id="dataInput" placeholder="Enter data...">
+  <button onclick="addData()">Add</button>
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Data</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <button onclick="clearSavedData()">Clear All Saved Data</button>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/ac42c3b1f7.js" crossorigin="anonymous"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Caveat:wght@400;700&family=Lobster&family=Monoton&family=Open+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display+SC:ital,wght@0,400;0,700;1,700&family=Playfair+Display:ital,wght@0,400;0,700;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+Pro:ital,wght@0,400;0,700;1,700&family=Work+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+.homePage {
+    height: 100vh;
+    background-image: url("https://img.freepik.com/free-photo/gradient-bokeh-digital-business-wallpaper_53876-110796.jpg?t=st=1710996530~exp=1711000130~hmac=b840d9890e1ccaa010b7da9bf7bb054c8ec86ef85efd421b056a03a084f846fe&w=1380");
+    background-size: cover;
+}
+
+.Imagecard {
+    height: 160px;
+    text-align: center;
+}
+
+.imageStyles {
+    width: 55%;
+    border-radius: 12px;
+}
+.Imagecard:hover {
+    transform: Scale(1.2);
+}
+.imageName {
+    color : #ffffff;
+    font-size: 18px;
+    margin-top : 12px;
+    font-weight : bold;
+    font-family : "Roboto";
+}
+    </style>
+</head>
+
+<body>
+    <div class="homePage d-flex flex-column justify-content-center">
+        <div class="container" style="margin-top: 150px;">
+            <div class="row">
+                <div class="col-4 text-center" >
+                    <a class="Imagecard" href = "ind.html">
+                        <img src="matches.png" id="studentImage" class="imageStyles shadow" />
+                        <p class="imageName"> Matches </p>
+                    </a>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="Imagecard" href="matches.html">
+                        <img src="https://img.freepik.com/premium-photo/old-man-teacher-education-illustration-teacher-day_626849-9992.jpg?w=740" id="teachImg" class="imageStyles shadow" />
+                        <p class="imageName"> Points Table </p>
+                    </a>
+                </div>
+                <div class="col-4 text-center">
+                    <a class="Imagecard" href="profile.html">
+                        <img src="profiles.jpg" class="imageStyles shadow" />
+                        <p class="imageName"> Profiles </p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

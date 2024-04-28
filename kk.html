@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Saved Table</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+  <table id="dataTable">
+    <thead>
+      <tr>
+        <th>Rank</th>
+        <th>Name</th>
+        <th>Matches</th>
+        <th>Won</th>
+        <th>Lost</th>
+        <th>NRR</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Insert saved data here -->
+    </tbody>
+  </table>
+</div>
+<script>
+  // Function to load saved data from local storage
+  function loadSavedData() {
+    var savedData = localStorage.getItem("tableData");
+    if (savedData) {
+      var tableBody = document.querySelector("#dataTable tbody");
+      tableBody.innerHTML = savedData;
+    }
+  }
+
+  // Function to save data to local storage
+  function saveData() {
+    var tableBody = document.querySelector("#dataTable tbody");
+    localStorage.setItem("tableData", tableBody.innerHTML);
+  }
+
+  // Function to clear all saved data from local storage
+  function clearSavedData() {
+    localStorage.removeItem("tableData");
+    var tableBody = document.querySelector("#dataTable tbody");
+    tableBody.innerHTML = ""; // Clear the table
+    alert("All saved data cleared successfully.");
+  }
+
+  // Load saved data when the page loads
+  window.onload = loadSavedData;
+
+</script>
+</body>
+</html>
